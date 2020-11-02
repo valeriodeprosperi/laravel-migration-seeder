@@ -15,6 +15,10 @@ class CreateMangaTable extends Migration
     {
         Schema::create('manga', function (Blueprint $table) {
             $table->id();
+            $table->string("title");
+            $table->string("author",50);
+            $table->smallInteger("pages");
+            $table->float("price");
             $table->timestamps();
         });
     }
